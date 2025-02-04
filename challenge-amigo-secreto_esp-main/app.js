@@ -11,6 +11,7 @@ window.addEventListener("keydown",(e)=> {
 
 
 let participantes = [];
+let amigos = [];
 
 function agregarAmigo() {
     var nombre = document.getElementById("amigo").value;
@@ -19,10 +20,12 @@ function agregarAmigo() {
         return;
     } else {
         participantes.push(nombre);
+        amigos.push(nombre);
         console.log(participantes);
         document.getElementById("amigo").value = "";
     }
     mostrarListaAmigos(participantes);
+    console.log(amigos)
 }
 
 function mostrarListaAmigos(lista) {
@@ -35,4 +38,13 @@ function mostrarListaAmigos(lista) {
 } }
 
 function sortearAmigo() {
+    if (participantes.length == 0) {
+        alert("Por favor, ingresa almenos un amigo.");
+        return;
+    } else {
+        var Randomizer = Math.floor(Math.random()*participantes.length);
+        console.log(amigos[Randomizer]);
+        let Resultado = document.querySelector("#resultado");
+        Resultado.innerHTML = amigos[Randomizer];
+    }
 }
