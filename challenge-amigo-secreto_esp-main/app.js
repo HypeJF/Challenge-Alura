@@ -35,12 +35,4 @@ function mostrarListaAmigos(lista) {
 } }
 
 function sortearAmigo() {
-    document.getElementById("textolista").innerHTML='HolaTexto'
-    var list = document.getElementById("listaAmigos");
-    var new_li = document.createElement("li");
-    new_li.innerHTML = "Texto";
-    list.appendChild(new_li);
-
 }
-
-//crear for para recorrer el array de participantes
